@@ -1,6 +1,6 @@
-import glitch from './modules/glitch';
+import rangeCustom from './modules/range-custom';
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  glitch();
+  rangeCustom();
 });

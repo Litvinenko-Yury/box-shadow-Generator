@@ -1,0 +1,19 @@
+.page-main {
+  outline: 2px solid darkcyan;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  height: 90vh;
+}
+
+.page-main__inner {
+  outline: 1px dotted palevioletred;
+
+  padding: 1em;
+}
+
+.page-main__title {
+  margin-bottom: 1.5em;
+}

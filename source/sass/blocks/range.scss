@@ -1,0 +1,108 @@
+/*родительский блок для позиционирования .range в потоке документа*/
+.range {
+  outline: 1px dotted red;
+  position: relative;
+  //width: 800px;
+  height: 50px;
+}
+
+.range__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*прозрачный input type="range"*/
+/*opacity: 0; этому элементу устанавливает script*/
+.range__input {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  /*cursor: pointer;*/
+  cursor: ew-resize;
+}
+
+/*обертка для "визуального" range*/
+.range__wrapper {
+  position: absolute;
+  width: 100%;
+  height: 25%;
+  bottom: 25%;
+  left: 0;
+  //transform: translateY(-50%);
+}
+
+/*обертка для track и progress*/
+.range__wrap-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  //transform: translateY(50%);
+}
+
+/*track*/
+.range__track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+/*progress*/
+.range__progress {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background-color: lighten($color: gray, $amount: 20%);
+  border: 1px solid #000000;
+  border-radius: 4px;
+}
+
+/*handle - смещающийся элемент ползунка*/
+.range__handle {
+  position: absolute;
+  bottom: -100%;
+  height: 40px;
+  width: 40px;
+  border: 1px solid #30c7d6;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.range__handle::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #30c7d6;
+}
+
+.range__value {
+  position: absolute;
+  top: -5%;
+  left: 15%;
+  width: 35px;
+  height: 25px;
+  border: 1px dotted red;
+  color: coral;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}

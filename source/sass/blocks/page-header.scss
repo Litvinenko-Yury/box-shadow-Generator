@@ -1,3 +1,9 @@
 .page-header {
-  margin: 0 auto;
+  outline: 2px solid darkcyan;
+
+  min-height: 10vh;
+}
+
+.page-header__title {
+  line-height: $line-height;
 }

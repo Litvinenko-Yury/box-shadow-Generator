@@ -3,22 +3,18 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Startkit</title>
+  <title>box-shadow visual Generator</title>
   <meta name="author" content="Yury Litvinenko">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <link rel="preload" href="fonts/opensans.woff2" as="font">
-  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
-  <link rel="preload" href="fonts/opensanslight.woff2" as="font"> -->
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 
   <!-- classic-favicon -->
   <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
 
-  <!-- <script>
-    document.createElement("picture");
-  </script>
-  <script src="js/picturefill.min.js" async></script> -->
 </head>
 
 <body>
@@ -27,24 +23,44 @@
   </div> -->
 
   <header class="page-header">
-    <div class="page-header__wrap">
-    </div>
+    <span class="switcher-theme">Переключатель светлая тема/ темная тема</span>
+    <h1 class="page-header__title">box-shadow visual Constructor - Generator</h1>
+    <a class="page-header__link" href="https://litvinenko-yury.pro/" rel="noopener" aria-label="Go to the site litvinenko-yury.pro">by Yury Litvinenko</a>
   </header>
 
   <main class="page-main">
+    <div class="page-main__inner">
+      <h2 class="page-main__title">Ползунки</h2>
+      <div class="range  slider" id='range'>
+        <span class="range__name">Сдвиг по X</span>
+        <label class="range__label">
+          <input class="range__input" type="range" name="counter" min="-50" max="50" value="5" step="1">
+        </label>
+        <!-- <span class="range__help-text">Подсказка</span> -->
+      </div>
+
+      <div class="range  slider" id='range'>
+        <span class="range__name">Сдвиг по X</span>
+        <label class="range__label">
+          <input class="range__input" type="range" name="counter" min="-50" max="50" value="5" step="1">
+        </label>
+        <!-- <span class="range__help-text">Подсказка</span> -->
+      </div>
+
+    </div>
+
+    <div class="page-main__inner">
+      <h2 class="page-main__title">Макет тени</h2>
+    </div>
+    <div class="page-main__inner">
+      <h2 class="page-main__title">Готовое css-свойство</h2>
+    </div>
+    <div class="page-main__inner">
+      <h2 class="page-main__title">Пре-сеты</h2>
+    </div>
   </main>
 
-  <footer class="page-footer">
-    <div class="page-footer__wrap">
-    </div>
-  </footer>
-
-  <!-- object-fit for IE -->
-  <script src="js/ofi.min.js"></script>
-  <script>objectFitImages();</script>
-  <!-- ============ -->
-
-  <!-- <script src="js/script.min.js" async></script> -->
+  <script src="js/bundle.js"></script>
 </body>
 
 </html>

@@ -2,9 +2,9 @@
 /*Typography*/
 /*Font, line-height, headings.*/
 //=============================
-$font-family: "Open Sans",  "Arial", sans-serif;
+$font-family: "Open Sans", "Arial", sans-serif;
 
-//$font-size-h1: px;
+$font-size-h1: 48px;
 //$font-size-h2: px;
 //$font-size-h3: px;
 //$font-size-h4: px;
@@ -15,11 +15,11 @@ $font-family: "Open Sans",  "Arial", sans-serif;
 //$font-size--x-large: px;
 //$font-size--large: px;
 //$font-size--larger: px;
-//$font-size: px;
+$font-size: 16px;
 //$font-size--smaller: px;
 //$font-size--small: px;
 
-//$line-height: em;
+$line-height: 1.2em;
 //$line-height-auto: 1.2em;
 
 //================
@@ -52,8 +52,7 @@ $font-family: "Open Sans",  "Arial", sans-serif;
 //$gray--darkenest: ;
 //$gray--darkest: ;
 
-//$text-color: ; // Global text color on <body>;
-
+$text-color: #212121; // Global text color on <body>;
 
 //=============================
 //===Components===
@@ -64,7 +63,6 @@ $font-family: "Open Sans",  "Arial", sans-serif;
 //$padding-base-horizontal: px;
 
 //$border-radius-base: px;
-
 
 //=============================
 //===Links====
@@ -80,7 +78,6 @@ $font-family: "Open Sans",  "Arial", sans-serif;
 //$link-bg--focus: ;
 //$link-bg--active: ; //активная ссылка
 //$link-bg--down: ; //клик на ссылку
-
 
 //=============================
 //===Buttons===
@@ -107,7 +104,6 @@ $font-family: "Open Sans",  "Arial", sans-serif;
 //$btn-bg--hover: ;
 //$btn-bg--active: ;
 
-
 //$btn-border-radius-base: px;
 
 //$btn-border-color-base: ;
@@ -123,7 +119,6 @@ $font-family: "Open Sans",  "Arial", sans-serif;
 //$slider-toggle--active: ;
 //$slider-toggle--hover: ;
 //$slider-toggle--down: ;
-
 
 //=============================
 //===Media queries breakpoints===
