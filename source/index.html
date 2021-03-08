@@ -30,7 +30,7 @@
   <main class="page-main">
     <div class="page-main__inner">
       <h2 class="page-main__title">Ползунки</h2>
-      <div class="range  slider" data-range>
+      <div class="range  slider" data-range="">
         <span class="range__name">Сдвиг по X</span>
         <label class="range__label">
           <input class="range__input" type="range" name="counter" min="-50" max="50" value="5" step="1">
@@ -54,13 +54,36 @@
         <!-- <span class="range__help-text">Подсказка</span> -->
       </div>
 
+      <div class="range  slider" data-range>
+        <span class="range__name">Растяжение</span>
+        <label class="range__label">
+          <input class="range__input" type="range" name="counter" min="-50" max="50" value="5" step="1">
+        </label>
+        <!-- <span class="range__help-text">Подсказка</span> -->
+      </div>
+
+      <div class="range  slider" data-range>
+        <span class="range__name">Прозрачность</span>
+        <label class="range__label">
+          <input class="range__input" type="range" name="opacity" min="0" max="1" value="0.70" step="0.01">
+        </label>
+        <!-- <span class="range__help-text">Подсказка</span> -->
+      </div>
+
+      <div>
+        <span>Цвет тени</span>
+        <label>
+          <input type="text" name="color">
+        </label>
+      </div>
     </div>
 
     <div class="page-main__inner">
       <h2 class="page-main__title">Макет тени</h2>
     </div>
     <div class="page-main__inner">
-      <h2 class="page-main__title">Готовое css-свойство</h2>
+      <h2 class="page-main__title">CSS</h2>
+      <span class="page-main__css"></span>
     </div>
     <div class="page-main__inner">
       <h2 class="page-main__title">Пре-сеты</h2>
