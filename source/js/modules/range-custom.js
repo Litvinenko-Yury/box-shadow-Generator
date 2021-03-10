@@ -1,6 +1,5 @@
 /*custom-range.js*/
 /*created by Yuri Litvinenko  https://litvinenko-yury.pro/*/
-/*checking for IE Yuri Volkovsky  https://github.com/YuraVolk*/
 
 function customRange() {
 
@@ -16,7 +15,6 @@ function customRange() {
   /*****/
 
   const rangeAll = document.querySelectorAll('[data-range]');
-  console.log(rangeAll);
 
   rangeAll.forEach(item => {
     /*добавляем разметку для визуализации трека и ползунка*/
@@ -52,27 +50,6 @@ function customRange() {
       rangeProgress.style.width = (1 - ((this.value - rangeInputMin) / rangeMinMax)) * widthRange + 'px'; //установить ширину rangeProgress
       rangeHandle.style.left = (((this.value - rangeInputMin) / rangeMinMax) * widthRange - (widthHandle / 2)) + 'px'; //установить left для  rangeHandle
     };
-
-    // let ua = window.navigator.userAgent,
-    //   isIE = /MSIE|Trident/.test(ua); // проверка на IE
-
-    // if (isIE) {
-    //   //эта часть для IE
-    //   rangeInput.onchange = function () {
-    //     //output.innerHTML = rangeInput.value;
-    //     output.innerHTML = this.value;
-    //     rangeProgress.style.width = ((1 - ((rangeInput.value - rangeInputMin) / rangeMinMax)) * widthRange) + 'px'; //установить ширину rangeProgress
-    //     rangeHandle.style.left = (((rangeInput.value - rangeInputMin) / rangeMinMax) * widthRange - (widthHandle / 2)) + 'px'; //установить left для  rangeHandle
-    //   };
-    // } else {
-    //   //эта часть для нормальных браузеров
-    //   rangeInput.oninput = function () {
-    //     output.innerHTML = this.value;
-    //     rangeProgress.style.width = (1 - ((this.value - rangeInputMin) / rangeMinMax)) * widthRange + 'px'; //установить ширину rangeProgress
-    //     rangeHandle.style.left = (((this.value - rangeInputMin) / rangeMinMax) * widthRange - (widthHandle / 2)) + 'px'; //установить left для  rangeHandle
-    //   };
-    // }
-
   });
 }
 
