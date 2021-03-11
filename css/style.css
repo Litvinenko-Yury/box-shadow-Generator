@@ -361,7 +361,7 @@ p {
 
 h1 {
   font-size: 48px;
-  font-weight: 300; }
+  font-weight: 500; }
 
 a {
   text-decoration: none;
@@ -386,6 +386,16 @@ blockquote {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden; }
+
+.generate-css {
+  display: flex;
+  align-items: center;
+  padding: 1em;
+  max-width: 30em;
+  min-height: 5em;
+  font-size: 20px;
+  border: 1px solid #212121;
+  border-radius: 5px; }
 
 .modal {
   display: none; }
@@ -417,10 +427,19 @@ blockquote {
 
 .page-header {
   outline: 2px solid darkcyan;
-  min-height: 10vh; }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+  padding: 1em; }
 
 .page-header__title {
+  outline: 1px dotted coral;
+  text-align: center;
   line-height: 1.2em; }
+
+.page-header__link {
+  outline: 1px dotted coral; }
 
 .page-main {
   display: grid;
@@ -438,16 +457,6 @@ blockquote {
 .page-main__text {
   margin-bottom: 0.75em;
   margin-right: 0.5em; }
-
-.page-main__css {
-  display: flex;
-  align-items: center;
-  padding: 1em;
-  max-width: 30em;
-  min-height: 5em;
-  font-size: 20px;
-  border: 1px solid #212121;
-  border-radius: 5px; }
 
 .preview {
   width: 50%;
@@ -546,3 +555,6 @@ blockquote {
 
 .slider {
   margin-bottom: 1em; }
+
+.switcher-theme {
+  outline: 1px dotted coral; }
