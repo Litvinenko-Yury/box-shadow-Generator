@@ -4,16 +4,14 @@ function setShadow() {
   const optionsAll = document.querySelectorAll('[data-options]'),
     prev = document.querySelector('.preview');
 
-  const options = {}; // объект с параметрами тени
-  const colorRgbaShadow = {};// объект с цветом тени
-  const colorRgbaPrev = {};// объект с цветом .prev
-
-
-
+  const options = {}, // объект с параметрами тени
+    colorRgbaShadow = {}, // объект с цветом тени
+    colorRgbaPrev = {}; // объект с цветом .prev
 
   setStartColorRgbaShadow(); // заполнить colorRgbaShadow значениями по умолчанию
   setStartOptions(); //заполнить options значениями по умолчанию
-  setBoxShadow(); // функция задает стили тени
+  setBoxShadow(); // задаеть стили тени
+  generateCss(); // задать вывод CSS-свойства по умолчанию
   setCustomOptions(); // функция навешивает обработчики на input's
 
   console.log(options);
@@ -81,6 +79,7 @@ function setShadow() {
         item.addEventListener('input', () => {
           options.offsetX = +item.value;
           setBoxShadow();
+          generateCss();
         });
       }
 
@@ -88,6 +87,7 @@ function setShadow() {
         item.addEventListener('input', () => {
           options.offsetY = +item.value;
           setBoxShadow();
+          generateCss();
         });
       }
 
@@ -95,6 +95,7 @@ function setShadow() {
         item.addEventListener('input', () => {
           options.blur = +item.value;
           setBoxShadow();
+          generateCss();
         });
       }
 
@@ -103,6 +104,7 @@ function setShadow() {
         item.addEventListener('input', () => {
           options.spread = +item.value;
           setBoxShadow();
+          generateCss();
         });
       }
 
@@ -111,6 +113,7 @@ function setShadow() {
         item.addEventListener('input', () => {
           colorRgbaShadow.opacity = +item.value;
           setBoxShadow();
+          generateCss();
         });
       }
 
@@ -119,9 +122,17 @@ function setShadow() {
         item.addEventListener('input', () => {
           convertColor(item.value);
           setBoxShadow();
+          generateCss();
         });
       }
     });
+  }
+
+  /*вывод CSS-свойства*/
+  function generateCss() {
+    const text = document.querySelector('#text-css');
+
+    text.textContent = `box-shadow: ${options.offsetX}px, ${options.offsetY}px, ${options.blur}px, ${options.spread}px, rgba(${colorRgbaShadow.r}, ${colorRgbaShadow.g}, ${colorRgbaShadow.b}, ${colorRgbaShadow.opacity})`;
   }
 }
 

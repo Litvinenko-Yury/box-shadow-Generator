@@ -1,6 +1,4 @@
 .page-main {
-  outline: 2px solid darkcyan;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -20,4 +18,20 @@
 
 .page-main__text {
   margin-bottom: 0.75em;
+  margin-right: 0.5em;
+}
+
+.page-main__css {
+  display: flex;
+  align-items: center;
+
+  padding: 1em;
+
+  max-width: 30em;
+  min-height: 5em;
+
+  font-size: 20px;
+
+  border: 1px solid $text-color;
+  border-radius: 5px;
 }

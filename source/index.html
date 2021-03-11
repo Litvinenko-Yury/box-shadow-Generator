@@ -31,54 +31,44 @@
     <div class="page-main__inner">
       <h2 class="page-main__title">Ползунки</h2>
       <div class="range  slider" data-range>
-        <span class="range__name">Сдвиг по X</span>
-        <span class="range__name">/</span>
-        <span class="range__name">offset-x</span>
+        <span class="range__name">Сдвиг по X / <b>offset-x</b></span>
         <label class="range__label">
-          <input class="range__input" type="range" min="-50" max="50" value="3" step="1" data-options = "offsetX">
+          <input class="range__input" type="range" min="-50" max="50" value="3" step="1" data-options="offsetX">
         </label>
       </div>
 
       <div class="range  slider" data-range>
-        <span class="range__name">Сдвиг по Y</span>
-        <span class="range__name">/</span>
-        <span class="range__name">offset-y</span>
+        <span class="range__name">Сдвиг по Y / <b>offset-y</b></span>
         <label class="range__label">
-          <input class="range__input" type="range" min="-50" max="50" value="5" step="1" data-options = "offsetY">
+          <input class="range__input" type="range" min="-50" max="50" value="5" step="1" data-options="offsetY">
         </label>
       </div>
 
       <div class="range  slider" data-range>
-        <span class="range__name">Размытие</span>
-        <span class="range__name">/</span>
-        <span class="range__name">blur-radius</span>
+        <span class="range__name">Размытие / <b>blur-radius</b></span>
         <label class="range__label">
-          <input class="range__input" type="range" min="0" max="50" value="15" step="1" data-options = "blur">
+          <input class="range__input" type="range" min="0" max="50" value="15" step="1" data-options="blur">
         </label>
       </div>
 
       <div class="range  slider" data-range>
-        <span class="range__name">Растяжение</span>
-        <span class="range__name">/</span>
-        <span class="range__name">spread-radius</span>
+        <span class="range__name">Растяжение / <b>spread-radius</b></span>
         <label class="range__label">
-          <input class="range__input" type="range" min="-50" max="50" value="11" step="1" data-options = "spread">
+          <input class="range__input" type="range" min="-50" max="50" value="11" step="1" data-options="spread">
         </label>
       </div>
 
       <div class="range  slider" data-range>
-        <span class="range__name">Прозрачность Тени</span>
-        <span class="range__name">/</span>
-        <span class="range__name">Shadow Оpacity</span>
+        <span class="range__name">Прозрачность Тени / <b>Shadow Оpacity</b></span>
         <label class="range__label">
-          <input class="range__input" type="range" min="0" max="1" value="0.3" step="0.01" data-options = "opacity">
+          <input class="range__input" type="range" min="0" max="1" value="0.3" step="0.01" data-options="opacity">
         </label>
       </div>
 
       <div>
-        <p class="page-main__text">Цвет Тени / Color</p>
+        <span class="page-main__text">Цвет Тени / <b>Color</b></span>
         <label>
-          <input type="text" value="#212121" data-options = "shadow-color">
+          <input type="text" value="#212121" data-options="shadow-color">
         </label>
       </div>
     </div>
@@ -87,14 +77,14 @@
       <h2 class="page-main__title">Макет тени</h2>
       <p class="page-main__text">Цвет фона предпросмотра</p>
       <label>
-        <input class="range__input-color-prew" type="text" value="#717171" data-options = "prev-bg-color" disabled>
+        <input class="range__input-color-prew" type="text" value="#717171" data-options="prev-bg-color" disabled>
       </label>
       <div class="preview  page-main__inner-preview"></div>
     </div>
 
     <div class="page-main__inner">
       <h2 class="page-main__title">CSS</h2>
-      <span class="page-main__css"></span>
+      <span class="page-main__css" id='text-css'></span>
     </div>
     <div class="page-main__inner">
       <h2 class="page-main__title">Пре-сеты</h2>
