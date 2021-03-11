@@ -5,21 +5,43 @@ function setShadow() {
     prev = document.querySelector('.preview');
 
   const options = {}; // объект с параметрами тени
-
-  setStartOptions();
-  setBoxShadow();
-  setCustomOptions();
+  const colorRgbaShadow = {};// объект с цветом тени
+  const colorRgbaPrev = {};// объект с цветом .prev
 
 
+  console.log(colorRgbaShadow);
 
-
+  setStartColorRgbaShadow(); // заполнить colorRgbaShadow значениями по умолчанию
+  setStartOptions(); //заполнить options значениями по умолчанию
+  setBoxShadow(); // функция задает стили тени
+  setCustomOptions(); // функция навешивает обработчики на input's
 
 
   /***Functions***/
+  /*============*/
 
-  //задание стилей тени
-  function setBoxShadow() {
-    prev.style.boxShadow = `${options.offsetX}px ${options.offsetY}px ${options.blur}px ${options.spread}px ${options.shadowColor}`;
+  /*конвертация HEX в RGB*/
+  function convertColor(color) {
+    if (color.substring(0, 1) == '#') { //Удалить # в значении hex-цвета
+      color = color.substring(1);
+    }
+
+    colorRgbaShadow.r = parseInt(color.substring(0, 2), 16); // декодирование
+    colorRgbaShadow.g = parseInt(color.substring(2, 4), 16); // декодирование
+    colorRgbaShadow.b = parseInt(color.substring(4), 16); // декодирование
+  }
+
+  /*заполнить colorRgbaShadow значениями по умолчанию*/
+  function setStartColorRgbaShadow() {
+    optionsAll.forEach(item => {
+      if (item.getAttribute('data-options') == 'shadow-color') {
+        convertColor(item.value);
+      }
+
+      if (item.getAttribute('data-options') == 'opacity') {
+        colorRgbaShadow.opacity = +item.value;
+      }
+    });
   }
 
   /*заполнить options значениями по умолчанию*/
@@ -45,6 +67,10 @@ function setShadow() {
         options.opacity = +item.value;
       }
 
+      if (item.getAttribute('data-options') == 'opacity') {
+        options.opacity = +item.value;
+      }
+
       if (item.getAttribute('data-options') == 'shadow-color') {
         options.shadowColor = item.value;
       }
@@ -54,6 +80,11 @@ function setShadow() {
       }
     });
 
+  }
+
+  //задание стилей тени
+  function setBoxShadow() {
+    prev.style.boxShadow = `${options.offsetX}px ${options.offsetY}px ${options.blur}px ${options.spread}px ${options.shadowColor} ${options.opacity}`;
   }
 
   /*задание обработчиков*/
@@ -87,9 +118,16 @@ function setShadow() {
           setBoxShadow();
         });
       }
+
+      if (item.getAttribute('data-options') == 'opacity') {
+        console.log(`opacity`);
+        item.addEventListener('input', () => {
+          options.opacity = +item.value;
+          setBoxShadow();
+        });
+      }
     });
   }
-
 }
 
 export default setShadow;
