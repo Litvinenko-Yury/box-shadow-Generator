@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>box-shadow Constructor</title>
+  <meta name="author" content="Yury Litvinenko">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-300.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-regular.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v18-latin_cyrillic-700.woff2" as="font"> -->
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- classic-favicon -->
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+</head>
+
+<body>
+  <!--  <div style="display: none;">
+    <include src="build/img/vector/svg_sprite.svg"></include>
+  </div> -->
+
+  <header class="page-header">
+    <span class="switcher-theme">Переключатель светлая тема/ темная тема</span>
+    <h1 class="page-header__title">box-shadow visual Constructor - Generator</h1>
+    <a class="page-header__link" href="https://litvinenko-yury.pro/" rel="noopener" aria-label="Go to the site litvinenko-yury.pro">by Yury Litvinenko</a>
+  </header>
+
+  <main class="page-main">
+    <div class="page-main__inner">
+      <h2 class="page-main__title">Ползунки</h2>
+      <div class="range  slider" data-range="">
+        <span class="range__name">Сдвиг по X</span>
+        <span class="range__name">/</span>
+        <span class="range__name">offset-x</span>
+        <label class="range__label">
+          <input class="range__input" type="range" min="-50" max="50" value="3" step="1" data-options="offsetX">
+        </label>
+      </div>
+
+      <div class="range  slider" data-range="">
+        <span class="range__name">Сдвиг по Y</span>
+        <span class="range__name">/</span>
+        <span class="range__name">offset-y</span>
+        <label class="range__label">
+          <input class="range__input" type="range" min="-50" max="50" value="5" step="1" data-options="offsetY">
+        </label>
+      </div>
+
+      <div class="range  slider" data-range="">
+        <span class="range__name">Размытие</span>
+        <span class="range__name">/</span>
+        <span class="range__name">blur-radius</span>
+        <label class="range__label">
+          <input class="range__input" type="range" min="0" max="50" value="15" step="1" data-options="blur">
+        </label>
+      </div>
+
+      <div class="range  slider" data-range="">
+        <span class="range__name">Растяжение</span>
+        <span class="range__name">/</span>
+        <span class="range__name">spread-radius</span>
+        <label class="range__label">
+          <input class="range__input" type="range" min="-50" max="50" value="11" step="1" data-options="spread">
+        </label>
+      </div>
+
+      <div class="range  slider" data-range="">
+        <span class="range__name">Прозрачность Тени</span>
+        <span class="range__name">/</span>
+        <span class="range__name">Shadow Оpacity</span>
+        <label class="range__label">
+          <input class="range__input" type="range" min="0" max="1" value="0.3" step="0.01" data-options="opacity">
+        </label>
+      </div>
+
+      <div>
+        <p class="page-main__text">Цвет Тени / Color</p>
+        <label>
+          <input type="text" value="#212121" data-options="shadow-color">
+        </label>
+      </div>
+    </div>
+
+    <div class="page-main__inner">
+      <h2 class="page-main__title">Макет тени</h2>
+      <p class="page-main__text">Цвет фона предпросмотра</p>
+      <label>
+        <input class="range__input-color-prew" type="text" value="#717171" data-options="prev-bg-color" disabled="">
+      </label>
+      <div class="preview  page-main__inner-preview"></div>
+    </div>
+
+    <div class="page-main__inner">
+      <h2 class="page-main__title">CSS</h2>
+      <span class="page-main__css"></span>
+    </div>
+    <div class="page-main__inner">
+      <h2 class="page-main__title">Пре-сеты</h2>
+    </div>
+  </main>
+
+  <div class="modal ">
+    <div class="modal__overlay"></div>
+    <p class="modal__content">
+      Я большой поклонник винтажных вещей, но ваш браузер слишком устарел.
+    </p>
+  </div>
+
+  <script src="js/bundle.js"></script>
+</body>
+
+</html>
