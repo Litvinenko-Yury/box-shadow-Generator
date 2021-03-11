@@ -9,12 +9,15 @@ function setShadow() {
   const colorRgbaPrev = {};// объект с цветом .prev
 
 
-  console.log(colorRgbaShadow);
+
 
   setStartColorRgbaShadow(); // заполнить colorRgbaShadow значениями по умолчанию
   setStartOptions(); //заполнить options значениями по умолчанию
   setBoxShadow(); // функция задает стили тени
   setCustomOptions(); // функция навешивает обработчики на input's
+
+  console.log(options);
+  console.log(colorRgbaShadow);
 
 
   /***Functions***/
@@ -62,29 +65,13 @@ function setShadow() {
       if (item.getAttribute('data-options') == 'spread') {
         options.spread = +item.value;
       }
-
-      if (item.getAttribute('data-options') == 'opacity') {
-        options.opacity = +item.value;
-      }
-
-      if (item.getAttribute('data-options') == 'opacity') {
-        options.opacity = +item.value;
-      }
-
-      if (item.getAttribute('data-options') == 'shadow-color') {
-        options.shadowColor = item.value;
-      }
-
-      if (item.getAttribute('data-options') == 'prev-bg-color') {
-        options.prevBgColor = item.value;
-      }
     });
 
   }
 
   //задание стилей тени
   function setBoxShadow() {
-    prev.style.boxShadow = `${options.offsetX}px ${options.offsetY}px ${options.blur}px ${options.spread}px ${options.shadowColor} ${options.opacity}`;
+    prev.style.boxShadow = `${options.offsetX}px ${options.offsetY}px ${options.blur}px ${options.spread}px rgba(${colorRgbaShadow.r}, ${colorRgbaShadow.b}, ${colorRgbaShadow.b}, ${colorRgbaShadow.opacity})`;
   }
 
   /*задание обработчиков*/
@@ -122,7 +109,15 @@ function setShadow() {
       if (item.getAttribute('data-options') == 'opacity') {
         console.log(`opacity`);
         item.addEventListener('input', () => {
-          options.opacity = +item.value;
+          colorRgbaShadow.opacity = +item.value;
+          setBoxShadow();
+        });
+      }
+
+      if (item.getAttribute('data-options') == 'shadow-color') {
+        console.log(`shadow-color`);
+        item.addEventListener('input', () => {
+          convertColor(item.value);
           setBoxShadow();
         });
       }
