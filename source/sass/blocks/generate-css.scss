@@ -1,0 +1,14 @@
+.generate-css {
+  display: flex;
+  align-items: center;
+
+  padding: 1em;
+
+  max-width: 30em;
+  min-height: 5em;
+
+  font-size: 20px;
+
+  border: 1px solid $text-color;
+  border-radius: 5px;
+}

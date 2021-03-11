@@ -1,9 +1,20 @@
 .page-header {
   outline: 2px solid darkcyan;
 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   min-height: 10vh;
+  padding: 1em;
 }
 
 .page-header__title {
+  outline: 1px dotted coral;
+
+  text-align: center;
   line-height: $line-height;
+}
+
+.page-header__link {
+  outline: 1px dotted coral;
 }
